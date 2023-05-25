@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.shortcuts import render
 
 
@@ -43,3 +44,24 @@ class FormularioComidasView(HttpRequest):
         return render(request, "ComLista.html",{"Comidas":Comidas}) 
     
 >>>>>>> 22ccbe2 (se avanza en comidas)
+=======
+from django.shortcuts import render
+
+
+# Create your views here.
+def app3_vista(request): 
+    return render(request,'comidas.html') 
+
+def agregarComida(request, idComida, idDieta):
+    dietaID = None
+    for i in dietas:
+        nombreDieta = str(i.nombre)
+        if nombreDieta == idDieta:
+            dietaID = i.id
+            break
+    objDieta = dieta.objects.get(id=dietaID)
+    objComida = comida.objects.get(id=idComida)
+    CDInstance = comidaDieta.objects.create(comida=objComida,dieta=objDieta)
+    CDInstance.save()
+    return render(request, 'comidaAgregada.html', {})
+>>>>>>> 651dabb795813a6afaad9cb5ddf0a630dfa85e34

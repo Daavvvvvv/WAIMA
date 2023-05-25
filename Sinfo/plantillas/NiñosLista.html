@@ -1,0 +1,35 @@
+ 
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+ 
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th scope="col">Nombre</th>
+<th scope="col">Fecha_Nacimiento </th>
+<th scope="col"></th>Peso</th>
+<th scope="col">Edad</th>
+<th scopes="col">InfoTalla</th>
+
+  
+
+</tr>
+</thead>
+<tbody>
+{% for Niño in Niños %}
+<tr>
+<td>{{Niño.nombre}}</td>
+<td>{{Niño.fechaDeNacimiento }}</td>
+<td>{{Niño.peso }}</td>
+<td>{{Niño.infoTalla }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% endblock %}

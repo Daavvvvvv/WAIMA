@@ -1,0 +1,53 @@
+<<<<<<< HEAD
+{% extends 'index.html' %}
+
+
+{% block content %} 
+{% if form.errors %}
+     <div>
+       Mensaje de alerta 
+     </div>
+{% endif %}
+<h1> Registro de Niños </h1>
+<form action="{% url 'guardarNiño' %}" method="POST">
+     {% csrf_token %}
+     {% if mensaje %}
+         <div class="alert alert-success" role="alert">
+           Niño registrado exitosamentel
+         </div>
+     {% endif %}
+     {{ form }}
+     <button type="submit">
+</form>
+{% endblock %}
+
+
+
+
+=======
+{% extends 'index.html' %}
+
+
+{% block content %} 
+{% if form.errors %}
+     <div>
+       Mensaje de alerta 
+     </div>
+{% endif %}
+<h1> Registro de Niños </h1>
+<form action="{% url 'guardarNiño' %}" method="POST">
+     {% csrf_token %}
+     {% if mensaje %}
+         <div class="alert alert-success" role="alert">
+           Niño registrado exitosamentel
+         </div>
+     {% endif %}
+     {{ form }}
+     <button type="submit">
+</form>
+{% endblock %}
+
+
+
+
+>>>>>>> 22ccbe2 (se avanza en comidas)

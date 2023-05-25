@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+ 
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th scope="col">Producto</th>
+<th scope="col">Descripcion </th>
+<th scope="col"></th>Peso</th>
+<th scope="col">Informacion</th>
+
+
+  
+
+</tr>
+</thead>
+<tbody>
+{% for Comida in Comidas %}
+<tr>
+<td>{{Comida.producto}}</td>
+<td>{{Comida.descripcion }}</td>
+<td>{{Comida.peso }}</td>
+<td>{{Comida.informacion }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% endblock %}
